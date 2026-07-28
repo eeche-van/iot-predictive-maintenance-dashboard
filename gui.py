@@ -1,5 +1,5 @@
 """
-gui_dashboardHD.py
+gui.py
 
 GUI Dashboard Client
 
@@ -23,11 +23,11 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg # for embedding 
 from matplotlib.figure import Figure # for creating Matplotlib figures for live graphing
 
 # MQTT broker configuration
-broker = "localhost" # use 192.168.12.100 as local broker IP
+broker = "localhost" # use your local broker IP
 port = 1883
 
-# student_id and machine_id are used to construct MQTT topics for both publisher and subscriber
-student_id = "102781776"
+# id and machine_id are used to construct MQTT topics for both publisher and subscriber
+id = "102781776"
 machine_id = "machine01"
 
 # MQTT topics
@@ -36,8 +36,8 @@ prediction_topic = f"public/102781776/machine01/prediction"
 command_topic = f"public/102781776/machine01/command"
 ack_topic = f"public/102781776/machine01/ack"
 reset_topic = f"public/102781776/machine01/reset"
-publisher_status_topic = f"{student_id}/status/user1"
-subscriber_status_topic = f"{student_id}/status/user2"
+publisher_status_topic = f"{id}/status/user1"
+subscriber_status_topic = f"{id}/status/user2"
 
 # GUI Colours
 BG = "#0f172a"
