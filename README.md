@@ -34,28 +34,16 @@ VS Code: Development environment
 
 ---
 # 📡 System Architecture
+<p align="center">
+  <img src="system-architecture.png"
+       alt="IoT Predictive Maintenance System Architecture"
+       width="600">
+</p>
 
-```text
-                 Sensor Publisher
-        (Machine Telemetry Simulator)
-                      │
-                      │ Publish
-                      ▼
-          +-----------------------+
-          |   Mosquitto Broker    |
-          +-----------------------+
-             ▲               ▲
-             │               │
-     Subscribe        Publish Prediction
-             │               │
-             │               ▼
-     Predictive Maintenance Engine
-             │
-             │ Publish Commands
-             ▼
-      Machine Dashboard (GUI)
+<p align="center">
+  <em>MQTT-based Dashboard System Architecture</em>
+</p>
 
-```
 ---
 # 🔄 MQTT Communication Flow
 public/.../sensors | Publisher | Dashboard & Prediction Engine | Machine telemetry 
@@ -77,7 +65,9 @@ status/user2 | Prediction Engine | Dashboard | Subscriber status
 The prediction engine continuously evaluates incoming sensor readings using predefined operating thresholds.
 
 | 🟢 Normal | < 75°C | < 4.5 mm/s | Continue operation 
+
 | 🟡 Warning | ≥ 75°C | ≥ 4.5 mm/s | Enable cooling & schedule maintenance 
+
 | 🔴 Critical | ≥ 85°C | ≥ 6.0 mm/s | Emergency stop & inspection 
 
 ---
