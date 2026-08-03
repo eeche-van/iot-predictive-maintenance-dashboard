@@ -46,17 +46,17 @@ VS Code: Development environment
 
 ---
 # 🔄 MQTT Communication Flow
-public/.../sensors | Publisher | Dashboard & Prediction Engine | Machine telemetry 
+| public/.../sensors | Publisher | Dashboard & Prediction Engine | Machine telemetry |
 
-public/.../prediction | Prediction Engine | Publisher & Dashboard | Machine condition 
+| public/.../prediction | Prediction Engine | Publisher & Dashboard | Machine condition | 
 
-public/.../command | Prediction Engine | Publisher | Machine commands 
+| public/.../command | Prediction Engine | Publisher | Machine commands |
 
-public/.../reset | Dashboard | Publisher | Maintenance reset 
+| public/.../reset | Dashboard | Publisher | Maintenance reset |
 
-status/user1 | Publisher | Dashboard | Publisher status 
+| status/user1 | Publisher | Dashboard | Publisher status |
 
-status/user2 | Prediction Engine | Dashboard | Subscriber status
+| status/user2 | Prediction Engine | Dashboard | Subscriber status |
 
 ---
 
