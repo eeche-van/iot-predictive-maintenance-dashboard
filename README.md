@@ -23,14 +23,16 @@ This project demonstrates IoT communication, real-time data processing, predicti
 
 ---
 # 🛠 Technologies Used
-Python: Core programming language 
-MQTT: Publish–Subscribe communication 
-Eclipse Mosquitto: MQTT Broker 
-Paho MQTT: MQTT client library 
-Tkinter: Dashboard GUI 
-Matplotlib: Live data visualisation 
-JSON: Message formatting 
-VS Code: Development environment 
+| Technology | Purpose |
+|------------|---------|
+| Python 3 | Core programming language |
+| MQTT | Publish–Subscribe communication |
+| Eclipse Mosquitto | MQTT Broker |
+| Paho MQTT | MQTT client library |
+| Tkinter | Dashboard GUI |
+| Matplotlib | Live data visualisation |
+| JSON | Message formatting |
+| VS Code | Development environment |
 
 ---
 # 📡 System Architecture
@@ -46,6 +48,9 @@ VS Code: Development environment
 
 ---
 # 🔄 MQTT Communication Flow
+
+| Topic | Publisher | Subscriber | Purpose |
+|--------|-----------|------------|---------|
 | public/.../sensors | Publisher | Dashboard & Prediction Engine | Machine telemetry |
 
 | public/.../prediction | Prediction Engine | Publisher & Dashboard | Machine condition | 
@@ -64,10 +69,10 @@ VS Code: Development environment
 
 The prediction engine continuously evaluates incoming sensor readings using predefined operating thresholds.
 
+| Machine State | Temperature | Vibration | Action |
+|---------------|------------|------------|--------|
 | 🟢 Normal | < 75°C | < 4.5 mm/s | Continue operation 
-
 | 🟡 Warning | ≥ 75°C | ≥ 4.5 mm/s | Enable cooling & schedule maintenance 
-
 | 🔴 Critical | ≥ 85°C | ≥ 6.0 mm/s | Emergency stop & inspection 
 
 ---
